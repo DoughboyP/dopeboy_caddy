@@ -63,7 +63,7 @@ def main() -> None:
     # The Cadillac
     # ------------------------------------------------------------------
     print("\n" + "=" * 60)
-    ride = Cadillac(year=1996, model="DeVille")
+    ride = Cadillac(year=1972, model="Eldorado")
     print(ride.specs())
 
     print("\n🔊  Audio:")

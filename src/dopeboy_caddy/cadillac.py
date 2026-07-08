@@ -130,29 +130,31 @@ class HeadUnit:
 
 class Cadillac:
     """
-    The DopeBoy's fully customised Cadillac.
+    The DopeBoy's fully customised 1972 Cadillac Eldorado.
 
     Specs
     -----
     Exterior:
         - Roof       : Gloss white
         - Rims       : 24" gold spoke (set of 4)
+        - Tires      : Whitewall
     Interior:
         - Seats      : New white leather (full cabin)
         - Audio      : Premium {SoundSystem}
         - Head unit  : {HeadUnit} with hidden locked compartment
     """
 
-    ROOF_COLOR = "gloss white"
-    RIM_STYLE  = "24-inch gold spoke"
-    RIM_COUNT  = 4
+    ROOF_COLOR    = "gloss white"
+    RIM_STYLE     = "24-inch gold spoke"
+    RIM_COUNT     = 4
     SEAT_MATERIAL = "white leather"
+    TIRE_STYLE    = "whitewall"
 
     def __init__(
         self,
         make: str = "Cadillac",
-        model: str = "DeVille",
-        year: int = 1996,
+        model: str = "Eldorado",
+        year: int = 1972,
         sound_system: Optional[SoundSystem] = None,
         head_unit: Optional[HeadUnit] = None,
     ) -> None:
@@ -199,6 +201,7 @@ class Cadillac:
             f"{'='*52}",
             f"  Roof          : {self.ROOF_COLOR}",
             f"  Rims          : {self.RIM_STYLE} (×{self.RIM_COUNT})",
+            f"  Tires         : {self.TIRE_STYLE}",
             f"  Seats         : New {self.SEAT_MATERIAL}",
             f"  Audio         : {self.sound_system}",
             f"  Head unit     : {self.head_unit}",
@@ -213,4 +216,4 @@ class Cadillac:
         )
 
     def __str__(self) -> str:
-        return f"🚗 {self.year} {self.make} {self.model} — white roof, gold spokes, white leather"
+        return f"🚗 {self.year} {self.make} {self.model} — white roof, gold spokes, whitewall tires, white leather"

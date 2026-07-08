@@ -130,13 +130,14 @@ class TestHeadUnit:
 
 class TestCadillac:
     def setup_method(self):
-        self.car = Cadillac(year=1996, model="DeVille")
+        self.car = Cadillac(year=1972, model="Eldorado")
 
     def test_default_specs(self):
         assert self.car.ROOF_COLOR == "gloss white"
         assert "gold spoke" in self.car.RIM_STYLE
         assert self.car.SEAT_MATERIAL == "white leather"
         assert self.car.RIM_COUNT == 4
+        assert self.car.TIRE_STYLE == "whitewall"
 
     def test_play_delegates_to_sound_system(self):
         msg = self.car.play("Represent")
@@ -174,9 +175,10 @@ class TestCadillac:
         specs = self.car.specs()
         assert "gloss white" in specs
         assert "gold spoke" in specs
+        assert "whitewall" in specs
         assert "white leather" in specs
-        assert "1996" in specs
-        assert "DeVille" in specs
+        assert "1972" in specs
+        assert "Eldorado" in specs
 
     def test_repr(self):
         r = repr(self.car)
@@ -187,4 +189,5 @@ class TestCadillac:
         s = str(self.car)
         assert "white roof" in s
         assert "gold spokes" in s
+        assert "whitewall" in s
         assert "white leather" in s
