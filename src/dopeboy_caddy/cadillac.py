@@ -135,6 +135,7 @@ class Cadillac:
     Specs
     -----
     Exterior:
+        - Body color : Brown
         - Roof       : Gloss white
         - Rims       : 24" gold spoke (set of 4)
         - Tires      : Whitewall
@@ -144,6 +145,7 @@ class Cadillac:
         - Head unit  : {HeadUnit} with hidden locked compartment
     """
 
+    BODY_COLOR    = "brown"
     ROOF_COLOR    = "gloss white"
     RIM_STYLE     = "24-inch gold spoke"
     RIM_COUNT     = 4
@@ -199,6 +201,7 @@ class Cadillac:
             f"{'='*52}",
             f"  {self.year} {self.make} {self.model}",
             f"{'='*52}",
+            f"  Body color    : {self.BODY_COLOR}",
             f"  Roof          : {self.ROOF_COLOR}",
             f"  Rims          : {self.RIM_STYLE} (×{self.RIM_COUNT})",
             f"  Tires         : {self.TIRE_STYLE}",
@@ -216,4 +219,4 @@ class Cadillac:
         )
 
     def __str__(self) -> str:
-        return f"🚗 {self.year} {self.make} {self.model} — white roof, gold spokes, whitewall tires, white leather"
+        return f"🚗 {self.year} {self.make} {self.model} — {self.BODY_COLOR}, white roof, gold spokes, whitewall tires, white leather"

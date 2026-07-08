@@ -133,6 +133,7 @@ class TestCadillac:
         self.car = Cadillac(year=1972, model="Eldorado")
 
     def test_default_specs(self):
+        assert self.car.BODY_COLOR == "brown"
         assert self.car.ROOF_COLOR == "gloss white"
         assert "gold spoke" in self.car.RIM_STYLE
         assert self.car.SEAT_MATERIAL == "white leather"
@@ -173,6 +174,7 @@ class TestCadillac:
 
     def test_specs_contains_key_details(self):
         specs = self.car.specs()
+        assert "brown" in specs
         assert "gloss white" in specs
         assert "gold spoke" in specs
         assert "whitewall" in specs
@@ -187,6 +189,7 @@ class TestCadillac:
 
     def test_str(self):
         s = str(self.car)
+        assert "brown" in s
         assert "white roof" in s
         assert "gold spokes" in s
         assert "whitewall" in s
