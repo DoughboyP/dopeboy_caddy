@@ -72,7 +72,7 @@ class HeadUnit:
     # Compartment access
     # ------------------------------------------------------------------
 
-    def unlock_compartment(self, code: str, correct_code: str = "0000") -> str:
+    def unlock_compartment(self, code: str, correct_code: str = "2432") -> str:
         """Unlock the hidden compartment behind the display panel."""
         if code == correct_code:
             self._compartment_locked = False
@@ -84,7 +84,7 @@ class HeadUnit:
         self._compartment_locked = True
         return "🔒 Compartment locked."
 
-    def store_item(self, item: str, code: str, correct_code: str = "0000") -> str:
+    def store_item(self, item: str, code: str, correct_code: str = "2432") -> str:
         """Store an item in the compartment (must be unlocked first)."""
         if self._compartment_locked:
             return "❌ Cannot store item — compartment is locked."
@@ -94,7 +94,7 @@ class HeadUnit:
             self._compartment_contents.append(item)
         return f"'{item}' stored in compartment."
 
-    def retrieve_item(self, item: str, code: str, correct_code: str = "0000") -> str:
+    def retrieve_item(self, item: str, code: str, correct_code: str = "2432") -> str:
         """Retrieve an item from the compartment."""
         if self._compartment_locked:
             return "❌ Compartment is locked."
@@ -179,16 +179,16 @@ class Cadillac:
     def stop_music(self) -> str:
         return self.sound_system.stop()
 
-    def unlock_compartment(self, code: str, correct_code: str = "0000") -> str:
+    def unlock_compartment(self, code: str, correct_code: str = "2432") -> str:
         return self.head_unit.unlock_compartment(code, correct_code)
 
     def lock_compartment(self) -> str:
         return self.head_unit.lock_compartment()
 
-    def store_in_compartment(self, item: str, code: str, correct_code: str = "0000") -> str:
+    def store_in_compartment(self, item: str, code: str, correct_code: str = "2432") -> str:
         return self.head_unit.store_item(item, code, correct_code)
 
-    def retrieve_from_compartment(self, item: str, code: str, correct_code: str = "0000") -> str:
+    def retrieve_from_compartment(self, item: str, code: str, correct_code: str = "2432") -> str:
         return self.head_unit.retrieve_item(item, code, correct_code)
 
     # ------------------------------------------------------------------
