@@ -11,12 +11,12 @@ def main() -> None:
     # ------------------------------------------------------------------
     # Set up the DopeBoy
     # ------------------------------------------------------------------
-    dp = DopeBoy(name="D-Boy", home_dimension="Prime")
+    dp = DopeBoy(name="D-Boy", home_dimension="3rd World")
 
     # Register additional dimensions he operates in
-    dp.add_dimension("Alpha",   description="The upside-down market")
-    dp.add_dimension("Quantum", description="Probability-wave hustling")
-    dp.add_dimension("Astral",  description="Dream-state distribution")
+    dp.add_dimension("Alpha",   description="P")
+    dp.add_dimension("Quantum", description="P")
+    dp.add_dimension("Astral",  description="P")
 
     print("=" * 60)
     print(f"  Introducing: {dp.name}")
@@ -24,13 +24,27 @@ def main() -> None:
     print("=" * 60)
 
     # ------------------------------------------------------------------
-    # Move product across dimensions
+    # Move product in all dimensions. You keep your fair share of profit (33%) and leave me with mine
     # ------------------------------------------------------------------
-    sales = [
-        ("Prime",   "premium_blend", 10,  25.00),
-        ("Alpha",   "rare_strain",    5,  75.00),
-        ("Quantum", "void_dust",      8,  50.00),
-        ("Astral",  "dream_wave",    12,  40.00),
+    sales =  sales = [
+        ("1",   "Heroin",     1,  32000.00),
+        ("2",   "Cannabis",    1,  1300.00),
+        ("3", "Cocaine powder",       1,  40000.00),
+        ("4",  "Ecstacy pills",     1,  4000.00),
+        ("5",  "Dimethyltryptamine", 1, 5000.00),
+        ("6",  "Fentanyl",       1, 2000.00),
+        ("7",   "Actavis, Wockhardt 16 oz.", 1,  1000.00),
+        ("8",   "Ketamine",      1,  1200.00),
+        ("9",   "Crack cocaine", 1,  23000.00),
+        ("10",  "Mushrooms",     1,  1400.00),
+        ("11",  "LSD",           1,  500.00),
+        ("12",  "Nitrous Tank",       1,  300.00),
+        ("13",  "Spice",         1,  4000.00),
+        ("14",  "R-AD's",        1,  1000.00),
+        ("15",  "MDMA",          1,  1300.00),
+        ("16",  "Oxycontin",     1,  50.00),
+        ("17",  "Shatter",       1,  400.00),
+        ("18",  "Methamphetamine",  1, 13000.00),
     ]
 
     print("\n📦  Sales ledger:")
@@ -67,13 +81,13 @@ def main() -> None:
     print(ride.specs())
 
     print("\n🔊  Audio:")
-    print(f"   {ride.play('Represent — Nas')}")
+    print(f"   {ride.play('Terrorist in da city- Husalah')}")
     print(f"   {ride.set_volume(85)}")
 
     print("\n🔒  Head-unit compartment:")
     print(f"   {ride.unlock_compartment('1234')}")       # wrong code
-    print(f"   {ride.unlock_compartment('0000')}")       # correct
-    print(f"   {ride.store_in_compartment('Roscoe', '0000')}")  # store the piece
+    print(f"   {ride.unlock_compartment('2432')}")       # correct
+    print(f"   {ride.store_in_compartment('', '2432')}")  # store the piece
     print(f"   {ride.lock_compartment()}")
     print(f"   Locked? {ride.head_unit.is_locked}")
 
