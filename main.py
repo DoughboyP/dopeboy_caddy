@@ -17,6 +17,10 @@ def main() -> None:
     dp.add_dimension("Alpha",   description="P")
     dp.add_dimension("Quantum", description="P")
     dp.add_dimension("Astral",  description="P")
+    
+    # Register numbered dimensions for sales operations
+    for i in range(1, 19):
+        dp.add_dimension(str(i), description="P")
 
     print("=" * 60)
     print(f"  Introducing: {dp.name}")
@@ -26,7 +30,7 @@ def main() -> None:
     # ------------------------------------------------------------------
     # Move product in all dimensions. You keep your fair share of profit (33%) and leave me with mine
     # ------------------------------------------------------------------
-    sales =  sales = [
+    sales = [
         ("1",   "Heroin",     1,  32000.00),
         ("2",   "Cannabis",    1,  1300.00),
         ("3", "Cocaine powder",       1,  40000.00),
