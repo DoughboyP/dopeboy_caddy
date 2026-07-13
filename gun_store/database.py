@@ -61,6 +61,9 @@ class Database:
                 + seed_data.AMMUNITION
                 + seed_data.ACCESSORIES
                 + seed_data.MODIFICATIONS
+                + seed_data.INTERDIMENSIONAL_FIREARMS
+                + seed_data.INTERDIMENSIONAL_AMMO
+                + seed_data.INTERDIMENSIONAL_MODS
             ),
             "employees": seed_data.EMPLOYEES,
             "customers": seed_data.CUSTOMERS,

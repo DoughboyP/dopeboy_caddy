@@ -2,6 +2,12 @@
 gun_store/seed_data.py
 ----------------------
 Initial inventory, employees, and customers for the Paseo Guns demo.
+
+Also contains the INTERDIMENSIONAL COLLECTION — DopeBoy's personal cache of
+firearms and modifications sourced from parallel dimensions (Dim. 1 – Dim. 5,
+Dim-4, Void, and beyond).  These exotic pieces are catalogued in the store
+computer under the "Interdimensional" category and are treated as rare /
+collector-grade inventory.
 """
 
 from __future__ import annotations
@@ -231,55 +237,6 @@ FIREARMS: List[Dict[str, Any]] = [
         "price": 379.99, "quantity": 3, "reorder_level": 1,
         "firearm_type": "Shotgun", "caliber": "20 Gauge", "action": "Pump-Action",
         "barrel_length": "22.0\"", "capacity": "5+1", "finish": "Matte Blue / Wood",
-    },
-    # ----- Paseo Arms (Custom Brand) -----
-    {
-        "id": "PA001", "product_type": "Firearm", "category": "Firearm",
-        "name": "Paseo Arms Vato 9mm Compact", "brand": "Paseo Arms", "model": "Vato 9",
-        "description": "Paseo Arms exclusive compact 9mm. Ported slide, custom G10 grips, optics-ready cut. 15+1.",
-        "price": 1099.99, "quantity": 5, "reorder_level": 2,
-        "firearm_type": "Handgun", "caliber": "9mm", "action": "Semi-Auto Striker-Fired",
-        "barrel_length": "3.9\"", "capacity": "15+1", "finish": "Cerakote OD Green / Black",
-    },
-    {
-        "id": "PA002", "product_type": "Firearm", "category": "Firearm",
-        "name": "Paseo Arms Cartel 45 1911", "brand": "Paseo Arms", "model": "Cartel 45",
-        "description": "Paseo Arms custom 1911 in .45 ACP. Full-size, hand-fitted, match barrel, VZ G10 grips.",
-        "price": 1799.99, "quantity": 3, "reorder_level": 1,
-        "firearm_type": "Handgun", "caliber": ".45 ACP", "action": "Semi-Auto Single-Action",
-        "barrel_length": "5.0\"", "capacity": "8+1", "finish": "Cerakote Burnt Bronze",
-    },
-    {
-        "id": "PA003", "product_type": "Firearm", "category": "Firearm",
-        "name": "Paseo Arms Loco 10mm", "brand": "Paseo Arms", "model": "Loco 10",
-        "description": "Full-size 10mm Auto pistol by Paseo Arms. Threaded barrel, compensator, fiber optic sights.",
-        "price": 1349.99, "quantity": 4, "reorder_level": 2,
-        "firearm_type": "Handgun", "caliber": "10mm Auto", "action": "Semi-Auto Striker-Fired",
-        "barrel_length": "4.5\" Threaded", "capacity": "15+1", "finish": "Cerakote Flat Dark Earth",
-    },
-    {
-        "id": "PA004", "product_type": "Firearm", "category": "Firearm",
-        "name": "Paseo Arms Barrio AR-15 5.56", "brand": "Paseo Arms", "model": "Barrio AR",
-        "description": "Paseo Arms custom AR-15. 16\" match barrel, MLOK rail, custom Cerakote.",
-        "price": 1499.99, "quantity": 3, "reorder_level": 1,
-        "firearm_type": "Rifle", "caliber": "5.56 NATO / .223 Rem", "action": "Semi-Auto Gas-Impingement",
-        "barrel_length": "16.0\"", "capacity": "30+1", "finish": "Cerakote Coyote / Black",
-    },
-    {
-        "id": "PA005", "product_type": "Firearm", "category": "Firearm",
-        "name": "Paseo Arms Soldado AK 7.62x39", "brand": "Paseo Arms", "model": "Soldado AK",
-        "description": "Paseo Arms custom AK-pattern rifle. Milled receiver, custom furniture, enhanced trigger.",
-        "price": 1699.99, "quantity": 2, "reorder_level": 1,
-        "firearm_type": "Rifle", "caliber": "7.62x39mm", "action": "Semi-Auto Piston",
-        "barrel_length": "16.25\"", "capacity": "30+1", "finish": "Cerakote Desert Tan",
-    },
-    {
-        "id": "PA006", "product_type": "Firearm", "category": "Firearm",
-        "name": "Paseo Arms Trucha 12ga Tactical", "brand": "Paseo Arms", "model": "Trucha 12",
-        "description": "Paseo Arms custom semi-auto 12ga. Side-folder stock, ghost ring sights, extended mag tube.",
-        "price": 1299.99, "quantity": 2, "reorder_level": 1,
-        "firearm_type": "Shotgun", "caliber": "12 Gauge", "action": "Semi-Auto Gas-Operated",
-        "barrel_length": "18.5\"", "capacity": "8+1", "finish": "Cerakote Multicam Black",
     },
 ]
 
@@ -780,28 +737,6 @@ MODIFICATIONS: List[Dict[str, Any]] = [
         "price": 29.99, "quantity": 12, "reorder_level": 4,
         "mod_type": "Grips & Controls", "compatible_with": "AR-15/M4 (Mil-spec lower)", "installation_required": False,
     },
-    # Paseo Arms Custom Modifications
-    {
-        "id": "MO020", "product_type": "Modification", "category": "Modification",
-        "name": "Paseo Arms Vato Custom Trigger Kit", "brand": "Paseo Arms", "model": "Vato Trigger",
-        "description": "Exclusive Paseo Arms drop-in trigger kit for Glock 19/17. Polished, lightened components.",
-        "price": 179.99, "quantity": 8, "reorder_level": 3,
-        "mod_type": "Triggers", "compatible_with": "Glock 17, 19, 43X (Gen 3-5)", "installation_required": False,
-    },
-    {
-        "id": "MO021", "product_type": "Modification", "category": "Modification",
-        "name": "Paseo Arms Barrio AR BCG (Full-Auto Rated)", "brand": "Paseo Arms", "model": "Barrio BCG",
-        "description": "Paseo Arms full-auto rated bolt carrier group for AR-15. HPT/MPI tested, nickel boron.",
-        "price": 149.99, "quantity": 10, "reorder_level": 3,
-        "mod_type": "Rails & Mounting", "compatible_with": "AR-15 (5.56/.223)", "installation_required": False,
-    },
-    {
-        "id": "MO022", "product_type": "Modification", "category": "Modification",
-        "name": "Paseo Arms Loco Custom Cerakote Service", "brand": "Paseo Arms", "model": "Cerakote SVC",
-        "description": "Full Cerakote refinishing service by Paseo Arms in-house. Choose from 20+ colors.",
-        "price": 249.99, "quantity": 99, "reorder_level": 99,
-        "mod_type": "Grips & Controls", "compatible_with": "Any firearm — service item", "installation_required": True,
-    },
 ]
 
 # ---------------------------------------------------------------------------
@@ -895,5 +830,408 @@ CUSTOMERS: List[Dict[str, Any]] = [
         "notes": "First-time buyer. Interested in CCW.",
         "purchase_history": [],
         "created_at": "2024-01-22",
+    },
+]
+
+# ---------------------------------------------------------------------------
+# ══════════════════════════════════════════════════════════════════════════
+#  INTERDIMENSIONAL COLLECTION
+#  DopeBoy's personal collection acquired across parallel dimensions.
+#  Catalogued in the store computer — category: "Interdimensional"
+# ══════════════════════════════════════════════════════════════════════════
+# ---------------------------------------------------------------------------
+
+# ── Firearms from other worlds ──────────────────────────────────────────────
+
+INTERDIMENSIONAL_FIREARMS: List[Dict[str, Any]] = [
+
+    # ---- ALPHA DIMENSION  ("The Upside-Down Market") ----
+    {
+        "id": "ID-FH01", "product_type": "Firearm", "category": "Interdimensional",
+        "name": "Dim-2 Mirror-Forge Revolver [Dim. 2]", "brand": "Dim-2 Armory", "model": "Mirror-Forge Mk.I",
+        "description": (
+            "Hand-cast from inverted-market steel in the Dimension 2. "
+            "The cylinder rotates counter-clockwise; rifling is left-hand spiral. "
+            "Targets perceived threats before they are fired — the barrel points backward "
+            "until the trigger is pulled, at which point reality flips. "
+            "Includes 6 rounds of Dim-2 Hollow-Point. One-of-a-kind."
+        ),
+        "price": 3999.99, "quantity": 1, "reorder_level": 0,
+        "firearm_type": "Handgun", "caliber": "Dim-2 .44 Inverted Mag", "action": "DA/SA Revolver — Counter-Rotation",
+        "barrel_length": "6.0\" (inverted bore)", "capacity": "6", "finish": "Mirror Chrome / Shadow Black",
+    },
+    {
+        "id": "ID-FH02", "product_type": "Firearm", "category": "Interdimensional",
+        "name": "Dim-2 Shadow AR [Dim. 2]", "brand": "Dim-2 Armory", "model": "Shadow AR-X",
+        "description": (
+            "Semi-automatic carbine forged in the upside-down market of the Dimension 2. "
+            "Lower receiver is cast from inverted-density aluminum — lighter than air yet "
+            "twice as rigid. Fires standard 5.56 but with an inverted ballistic trajectory "
+            "that curves back on-target after 200 yards. M-LOK rail in mirror finish."
+        ),
+        "price": 4499.99, "quantity": 1, "reorder_level": 0,
+        "firearm_type": "Rifle", "caliber": "5.56 NATO (Dim-2-Trajectory)", "action": "Semi-Auto — Inverted Impingement",
+        "barrel_length": "16.0\" Mirror-Bore", "capacity": "30+1", "finish": "Mirror Chrome / Matte Black",
+    },
+    {
+        "id": "ID-FH03", "product_type": "Firearm", "category": "Interdimensional",
+        "name": "Dim-2 Doppelganger 1911 [Dim. 2]", "brand": "Dim-2 Armory", "model": "Doppelganger 45",
+        "description": (
+            "Exact mirror-image 1911 from the Dimension 2 — ambidextrous controls are "
+            "reversed: safety on the right, thumb pad on the left. "
+            "Fitted with an Dim-2-steel match barrel; accuracy is identical to its Dim-1-world "
+            "counterpart but the trigger breaks on the up-stroke. Rare collector piece."
+        ),
+        "price": 2899.99, "quantity": 1, "reorder_level": 0,
+        "firearm_type": "Handgun", "caliber": ".45 ACP (Dim-2-Cast)", "action": "Semi-Auto Single-Action — Mirrored",
+        "barrel_length": "5.0\" (right-hand rifling inverted)", "capacity": "8+1", "finish": "Chrome / Void Cerakote",
+    },
+
+    # ---- QUANTUM DIMENSION  ("Probability-Wave Hustling") ----
+    {
+        "id": "ID-FH04", "product_type": "Firearm", "category": "Interdimensional",
+        "name": "Schrödinger's Rifle [Dim. 3]", "brand": "Dim-3 Forge", "model": "QF-1887",
+        "description": (
+            "Lever-action long rifle from the Dimension 3. "
+            "According to Dim-3 probability mechanics, this rifle is simultaneously "
+            "loaded and unloaded until the bolt is cycled — at which point the universe "
+            "collapses into whichever state the operator intends. "
+            "Chamber accepts both .308 Win and its quantum superposition round, Q-308. "
+            "Do NOT open the action without observing the chamber first."
+        ),
+        "price": 6500.00, "quantity": 1, "reorder_level": 0,
+        "firearm_type": "Rifle", "caliber": ".308 Win / Q-308 Superposition", "action": "Lever-Action — Dim-3 Collapse",
+        "barrel_length": "24.0\" Uncertainty Bore", "capacity": "∞ (probability-limited)", "finish": "Dim-3 Phase Titanium",
+    },
+    {
+        "id": "ID-FH05", "product_type": "Firearm", "category": "Interdimensional",
+        "name": "Probability Pistol QX-9 [Dim. 3]", "brand": "Dim-3 Forge", "model": "QX-9 P-Wave",
+        "description": (
+            "Compact 9mm pistol engineered in the Dimension 3 using probability-wave "
+            "metallurgy. The slide exists in superposition between open and closed until "
+            "the shooter focuses — causing the weapon to instantly chamber or eject based "
+            "on mental intent. Ships with two magazines: one loaded, one in superposition. "
+            "Grip panels glow faint blue when charged."
+        ),
+        "price": 4200.00, "quantity": 1, "reorder_level": 0,
+        "firearm_type": "Handgun", "caliber": "9mm / Q-9 Wave Round", "action": "Semi-Auto Striker — P-Wave Fired",
+        "barrel_length": "4.02\" Wave-Rifled", "capacity": "15+1 (observed)", "finish": "Dim-3 Blue / Matte Black",
+    },
+    {
+        "id": "ID-FH06", "product_type": "Firearm", "category": "Interdimensional",
+        "name": "Entangled Shotgun QSG-12 [Dim. 3]", "brand": "Dim-3 Forge", "model": "QSG-12",
+        "description": (
+            "Pump-action 12-gauge with Dim-3-entangled barrel — linked to an identical "
+            "twin weapon held somewhere in the Dimension 3. Every round fired in "
+            "this dimension simultaneously fires in the entangled dimension. "
+            "Accepts standard 12-gauge shells. The pump cycles both weapons at once. "
+            "Folding stock, ghost ring sights with bioluminescent tritium inserts."
+        ),
+        "price": 5800.00, "quantity": 1, "reorder_level": 0,
+        "firearm_type": "Shotgun", "caliber": "12 Gauge (Entangled)", "action": "Pump-Action — Dim-3 Entangled",
+        "barrel_length": "18.5\" Entangled Chrome", "capacity": "7+1 (×2 across dimensions)", "finish": "Dim-3 Phase Blue / Black",
+    },
+
+    # ---- ASTRAL DIMENSION  ("Dream-State Distribution") ----
+    {
+        "id": "ID-FH07", "product_type": "Firearm", "category": "Interdimensional",
+        "name": "Dreamweave Sniper DS-300 [Dim. 4]", "brand": "Dim-4 Weaponworks", "model": "DS-300",
+        "description": (
+            "Bolt-action precision rifle from the Dimension 4, woven from solidified "
+            "dream-state energy and rare Dim-4 alloy. The barrel phases through solid "
+            "objects during the firing sequence, allowing the round to bypass hard cover. "
+            "Chambered in .300 Win Mag with Dim-4-stabilised projectiles. "
+            "Scope rail milled directly into the receiver. Ethereal cloud-pattern stock."
+        ),
+        "price": 7750.00, "quantity": 1, "reorder_level": 0,
+        "firearm_type": "Rifle", "caliber": ".300 Win Mag (Dim-4-Stabilised)", "action": "Bolt-Action — Phase-Through",
+        "barrel_length": "26.0\" Phase Barrel", "capacity": "5+1", "finish": "Dim-4 Cloud White / Silver",
+    },
+    {
+        "id": "ID-FH08", "product_type": "Firearm", "category": "Interdimensional",
+        "name": "Dream-Wave Revolver DW-357 [Dim. 4]", "brand": "Dim-4 Weaponworks", "model": "DW-357",
+        "description": (
+            "L-Frame revolver materialised from pure dream-state energy in Dimension 4 "
+            "Dimension. The cylinder is semi-transparent, revealing floating rounds held "
+            "in place by Dim-4 magnetism. Fires standard .357 Mag but the muzzle flash "
+            "manifests as a silent ripple of light — no report when fired in Dimension 4 "
+            "Dimension. On Prime, it operates normally with standard noise."
+        ),
+        "price": 3200.00, "quantity": 1, "reorder_level": 0,
+        "firearm_type": "Handgun", "caliber": ".357 Magnum (Dim-4-Phase)", "action": "DA/SA Revolver — Dim-4 Frame",
+        "barrel_length": "4.0\" Semi-Phase Steel", "capacity": "6", "finish": "Translucent Dim-4 Silver",
+    },
+    {
+        "id": "ID-FH09", "product_type": "Firearm", "category": "Interdimensional",
+        "name": "Dim-4 Combat Shotgun ACS-12 [Dim. 4]", "brand": "Dim-4 Weaponworks", "model": "ACS-12",
+        "description": (
+            "Semi-auto 12-gauge forged from Dim-4 dream-steel. The action cycles on "
+            "intent — simply willing the next round chambers it. Compatible with standard "
+            "12-gauge shells and Dim-4 Dim-5-Shot rounds (included, 5 rds). "
+            "Extended tube holds 8+1. Side-folding stock phases through the shooter's "
+            "shoulder for zero felt recoil when in Dim-4 mode."
+        ),
+        "price": 5500.00, "quantity": 1, "reorder_level": 0,
+        "firearm_type": "Shotgun", "caliber": "12 Gauge / Dim-4 Dim-5-Shot", "action": "Semi-Auto — Intent-Cycled",
+        "barrel_length": "18.5\" Dream-Steel", "capacity": "8+1", "finish": "Dim-4 Pearl White / Ghost Grey",
+    },
+
+    # ---- VOID DIMENSION  (Between dimensions) ----
+    {
+        "id": "ID-FH10", "product_type": "Firearm", "category": "Interdimensional",
+        "name": "Dim-5 Cannon VC-10mm [Dim. 5]", "brand": "Dim-5 Armaments", "model": "VC-10",
+        "description": (
+            "Full-size semi-auto pistol recovered from the inter-dimensional nexus (Dim. 5) — the "
+            "space between worlds. Frame is cast from compressed dark matter, giving it "
+            "a matte-black finish that absorbs all light. Fires standard 10mm Auto, but "
+            "the bore is lined with Dim-5-steel for unmatched durability. "
+            "The Dim-5 Cannon creates a miniature dimensional rift at the muzzle on each "
+            "shot, adding unpredictable travel to every round."
+        ),
+        "price": 8900.00, "quantity": 1, "reorder_level": 0,
+        "firearm_type": "Handgun", "caliber": "10mm Auto (Dim-5-Bore)", "action": "Semi-Auto Striker — Dark Matter Frame",
+        "barrel_length": "5.0\" Void-Steel Threaded", "capacity": "15+1", "finish": "Dim-5 Black — Light-Absorbing",
+    },
+    {
+        "id": "ID-FH11", "product_type": "Firearm", "category": "Interdimensional",
+        "name": "Dim-5 Rift Rifle VRR-308 [Dim. 5]", "brand": "Dim-5 Armaments", "model": "VRR-308",
+        "description": (
+            "Semi-auto 308 Win precision rifle from the inter-dimensional nexus (Dim. 5). "
+            "The receiver is built from collapsed dark matter — it weighs only 4 lbs "
+            "despite full steel internals. Each shot tears a micro-rift that adds "
+            "2,000 fps to the projectile beyond the muzzle. Optics-ready with 20 MOA "
+            "Picatinny rail. Night-vision compatible Void-absorb finish."
+        ),
+        "price": 11500.00, "quantity": 1, "reorder_level": 0,
+        "firearm_type": "Rifle", "caliber": ".308 Win (Dim-5-Accelerated)", "action": "Semi-Auto — Rift-Powered",
+        "barrel_length": "20.0\" Dark Matter Fluted", "capacity": "10+1", "finish": "Dim-5 Black — Anti-Reflective",
+    },
+    {
+        "id": "ID-FH12", "product_type": "Firearm", "category": "Interdimensional",
+        "name": "Dim-5 Scatter Shotgun VSS-12 [Dim. 5]", "brand": "Dim-5 Armaments", "model": "VSS-12",
+        "description": (
+            "Bullpup 12-gauge from Dimension 5. The bolt mechanism exists partially outside "
+            "this dimension — the action never jams because malfunctions are redirected "
+            "into Dimension 5. Fires 12-gauge buckshot that fragments into dimensional "
+            "splinters mid-flight. 12-round detachable box magazine. "
+            "Integrated folding bayonet forged from Dim-5-edge alloy."
+        ),
+        "price": 9200.00, "quantity": 1, "reorder_level": 0,
+        "firearm_type": "Shotgun", "caliber": "12 Gauge (Dim-5-Frag)", "action": "Semi-Auto Bullpup — Dim-5-Cycled",
+        "barrel_length": "14.0\" (bullpup effective 24\")", "capacity": "12", "finish": "Dim-5 Black / Dark Charcoal",
+    },
+
+    # ---- PRIME DIMENSION Exclusives (rare early DopeBoy era pieces) ----
+    {
+        "id": "ID-FH13", "product_type": "Firearm", "category": "Interdimensional",
+        "name": "DopeBoy Prime OG 9mm [Dim. 1]", "brand": "Dim-1 Foundry", "model": "OG-9 Prime",
+        "description": (
+            "The original DopeBoy sidearm — the first pistol forged in Dimension 1 "
+            "Dimension using early multidimensional metallurgy techniques. "
+            "Full-size 9mm with hand-fitted match barrel and custom D-Boy grips in "
+            "black G10. Rollmark reads 'PRIME – D-BOY EDITION'. Serial #0001. "
+            "This is the benchmark all interdimensional weapons are measured against."
+        ),
+        "price": 14999.99, "quantity": 1, "reorder_level": 0,
+        "firearm_type": "Handgun", "caliber": "9mm", "action": "Semi-Auto Striker-Fired",
+        "barrel_length": "4.49\" Match-Grade", "capacity": "17+1", "finish": "Prime Black Cerakote / D-Boy G10 Grips",
+    },
+]
+
+# ── Ammunition from other worlds ─────────────────────────────────────────────
+
+INTERDIMENSIONAL_AMMO: List[Dict[str, Any]] = [
+    {
+        "id": "ID-AM01", "product_type": "Ammunition", "category": "Interdimensional",
+        "name": "Dim-2 Inverted Hollow Point .44 (6 rds)", "brand": "Dim-2 Armory", "model": "AIHP-44",
+        "description": (
+            "6-round pack of Dimension 2 inverted hollow-point rounds in .44 caliber. "
+            "The hollow expands inward on impact, creating an implosion effect. "
+            "Stored in a mirrored steel case that reflects the shooter's intent."
+        ),
+        "price": 149.99, "quantity": 3, "reorder_level": 1,
+        "caliber": "Dim-2 .44 Inverted Mag", "ammo_type": "Inverted HP", "grain": "250gr",
+        "rounds_per_box": 6, "velocity": "1200 fps (inverted trajectory)",
+    },
+    {
+        "id": "ID-AM02", "product_type": "Ammunition", "category": "Interdimensional",
+        "name": "Dim-3 Superposition Rounds Q-308 (10 rds)", "brand": "Dim-3 Forge", "model": "Q-308",
+        "description": (
+            "10-round box of Dim-3 .308 rounds. Each projectile exists in two locations "
+            "simultaneously until it strikes a surface — then collapses into a single "
+            "impact point. Ideal for probability-based precision shooting. "
+            "Glows faint blue in low light."
+        ),
+        "price": 299.99, "quantity": 2, "reorder_level": 1,
+        "caliber": ".308 Win / Q-308 Superposition", "ammo_type": "Dim-3 HP", "grain": "175gr (observed)",
+        "rounds_per_box": 10, "velocity": "2650 fps (collapsed state)",
+    },
+    {
+        "id": "ID-AM03", "product_type": "Ammunition", "category": "Interdimensional",
+        "name": "Dim-4 Dim-5-Shot 12ga (5 rds)", "brand": "Dim-4 Weaponworks", "model": "AVS-12",
+        "description": (
+            "5 rounds of Dim-4 Dim-5-Shot 12-gauge shells. The payload consists of "
+            "solidified dream energy compressed into a slug-buckshot hybrid. "
+            "Phases through the first layer of cover and detonates behind it. "
+            "Non-lethal in the Dimension 4; standard lethality on Prime."
+        ),
+        "price": 199.99, "quantity": 2, "reorder_level": 1,
+        "caliber": "12 Gauge / Dim-4 Dim-5-Shot", "ammo_type": "Phase-Slug/Buck Hybrid", "grain": "Dim-4-mass equiv. 1.5oz",
+        "rounds_per_box": 5, "velocity": "1400 fps + phase boost",
+    },
+    {
+        "id": "ID-AM04", "product_type": "Ammunition", "category": "Interdimensional",
+        "name": "Void Dark-Matter 10mm (10 rds)", "brand": "Dim-5 Armaments", "model": "D5DM-10",
+        "description": (
+            "10 rounds of Dim-5-forged 10mm Auto. Projectiles are dark-matter jacketed — "
+            "they pass through standard ballistic gelatin without slowing, then deliver "
+            "full kinetic energy at the dimensional boundary of the target. "
+            "Anti-reflective Void-black casing. Do not store near quantum devices."
+        ),
+        "price": 249.99, "quantity": 2, "reorder_level": 1,
+        "caliber": "10mm Auto (Dim-5-Bore)", "ammo_type": "Dark Matter JHP", "grain": "200gr void-mass",
+        "rounds_per_box": 10, "velocity": "1250 fps (Prime observation)",
+    },
+]
+
+# ── Modifications from other worlds ──────────────────────────────────────────
+
+INTERDIMENSIONAL_MODS: List[Dict[str, Any]] = [
+    # Dimension 2 mods
+    {
+        "id": "ID-MO01", "product_type": "Modification", "category": "Interdimensional",
+        "name": "Dim-2 Inverted Match Barrel — Glock 17 [Dim. 2]", "brand": "Dim-2 Armory", "model": "AIB-G17",
+        "description": (
+            "Match-grade Glock 17 barrel forged in the Dimension 2. Left-hand rifling "
+            "provides a counter-rotational spin that compensates for Dim-1-world atmospheric "
+            "interference. Tighter groupings at 25+ yards. Threaded 1/2x28. Mirror-chrome finish."
+        ),
+        "price": 599.99, "quantity": 2, "reorder_level": 1,
+        "mod_type": "Barrels", "compatible_with": "Glock 17 Gen 3/4/5", "installation_required": False,
+    },
+    {
+        "id": "ID-MO02", "product_type": "Modification", "category": "Interdimensional",
+        "name": "Alpha Mirror Slide — Glock 19 [Dim. 2]", "brand": "Dim-2 Armory", "model": "AMS-G19",
+        "description": (
+            "Glock 19 replacement slide machined from Dimension 2 inverted-density steel. "
+            "The optics cut is milled for Trijicon RMR/Holosun 507C. Mirror-chrome finish "
+            "with Dim-2 inverted serration pattern. 40% lighter than standard."
+        ),
+        "price": 749.99, "quantity": 1, "reorder_level": 1,
+        "mod_type": "Slides", "compatible_with": "Glock 19 Gen 3/4/5", "installation_required": False,
+    },
+    # Dimension 3 mods
+    {
+        "id": "ID-MO03", "product_type": "Modification", "category": "Interdimensional",
+        "name": "Dim-3 Probability Trigger — AR-15 [Dim. 3]", "brand": "Dim-3 Forge", "model": "QPT-AR",
+        "description": (
+            "Drop-in AR-15 trigger group from the Dimension 3. Uses probability-wave "
+            "mechanics to pre-stage the sear — the trigger break is instantaneous because "
+            "the firing sequence begins at the Dim-3 level before the trigger is pulled. "
+            "Effective pull weight: 2.0 lbs. Reset: imperceptible. Glows faint blue."
+        ),
+        "price": 899.99, "quantity": 2, "reorder_level": 1,
+        "mod_type": "Triggers", "compatible_with": "AR-15/M4 (Mil-Spec lower)", "installation_required": False,
+    },
+    {
+        "id": "ID-MO04", "product_type": "Modification", "category": "Interdimensional",
+        "name": "Dim-3 Superposition Optic Mount [Dim. 3]", "brand": "Dim-3 Forge", "model": "QSOM-01",
+        "description": (
+            "Picatinny optic mount that maintains zero across dimensional phase shifts. "
+            "Built with Dim-3-locked torque bolts — once tightened, the zero cannot "
+            "change regardless of temperature, recoil, or dimensional transit. "
+            "Fits any 30mm or 34mm optic. Universal Picatinny spec."
+        ),
+        "price": 399.99, "quantity": 3, "reorder_level": 1,
+        "mod_type": "Rails & Mounting", "compatible_with": "Picatinny rail — universal (30mm/34mm)", "installation_required": False,
+    },
+    # Dimension 4 mods
+    {
+        "id": "ID-MO05", "product_type": "Modification", "category": "Interdimensional",
+        "name": "Dim-4 Dream-Stock — AR-15 [Dim. 4]", "brand": "Dim-4 Weaponworks", "model": "ADS-AR",
+        "description": (
+            "Carbine stock woven from solidified Dim-4 dream-energy. Weighs virtually "
+            "nothing yet absorbs 90% of recoil through a dimensional dampening field. "
+            "Length-of-pull adjusts via mental intent. Six positions. "
+            "Compatible with Mil-spec carbine buffer tubes."
+        ),
+        "price": 499.99, "quantity": 2, "reorder_level": 1,
+        "mod_type": "Stocks & Braces", "compatible_with": "AR-15/M4 (Mil-spec buffer tube)", "installation_required": False,
+    },
+    {
+        "id": "ID-MO06", "product_type": "Modification", "category": "Interdimensional",
+        "name": "Dim-4 Phase Compensator — 9mm [Dim. 4]", "brand": "Dim-4 Weaponworks", "model": "APC-9",
+        "description": (
+            "Threaded compensator for 9mm pistols sourced from the Dimension 4. "
+            "Ports muzzle blast into a brief Dim-4 phase pocket, eliminating muzzle "
+            "flip entirely. Flash signature is a soft silver ripple rather than a fireball. "
+            "1/2x28 thread. Compatible with Glock 17/19 threaded barrels."
+        ),
+        "price": 329.99, "quantity": 3, "reorder_level": 1,
+        "mod_type": "Muzzle Devices", "compatible_with": "9mm with 1/2x28 threaded barrel", "installation_required": False,
+    },
+    # Void mods
+    {
+        "id": "ID-MO07", "product_type": "Modification", "category": "Interdimensional",
+        "name": "Void-Steel Threaded Barrel — Glock 19 [Dim. 5]", "brand": "Dim-5 Armaments", "model": "VSTB-G19",
+        "description": (
+            "Replacement Glock 19 barrel machined from inter-dimensional Dim-5-steel. "
+            "Dim-5-steel is harder than any Dim-1-world material — rated for 1,000,000+ "
+            "rounds before wear. The bore absorbs residue instead of accumulating it. "
+            "Threaded 1/2x28. Matte black — absorbs all light reflection."
+        ),
+        "price": 699.99, "quantity": 2, "reorder_level": 1,
+        "mod_type": "Barrels", "compatible_with": "Glock 19 Gen 3/4/5", "installation_required": False,
+    },
+    {
+        "id": "ID-MO08", "product_type": "Modification", "category": "Interdimensional",
+        "name": "Dim-5 Rift Muzzle Brake — 5.56 [Dim. 5]", "brand": "Dim-5 Armaments", "model": "VRMB-556",
+        "description": (
+            "Muzzle brake machined from Dim-5-alloy. Creates a micro-dimensional rift "
+            "that diverts propellant gases entirely into Dimension 5 — effectively producing "
+            "zero muzzle blast or felt recoil at the shooter's position. "
+            "The round still travels at full velocity to the target. 1/2x28 thread. "
+            "No visible flash. Completely silent from all sides except downrange."
+        ),
+        "price": 849.99, "quantity": 2, "reorder_level": 1,
+        "mod_type": "Muzzle Devices", "compatible_with": "5.56 AR-15 with 1/2x28 threaded barrel", "installation_required": True,
+    },
+    {
+        "id": "ID-MO09", "product_type": "Modification", "category": "Interdimensional",
+        "name": "Dim-5-Linked Dual Trigger System — AR-15 [Dim. 5]", "brand": "Dim-5 Armaments", "model": "VDTS-AR",
+        "description": (
+            "Two-stage AR-15 trigger group with Void-linked sear — the sear exists "
+            "partially outside this dimension, making it immune to dirt, grit, or fouling. "
+            "Stage 1: 1.0 lb take-up. Stage 2: 1.5 lb glass break. "
+            "The trigger shoe is forged from Dim-5-edge alloy for tactile perfection."
+        ),
+        "price": 749.99, "quantity": 2, "reorder_level": 1,
+        "mod_type": "Triggers", "compatible_with": "AR-15/M4 (Mil-Spec lower)", "installation_required": True,
+    },
+    # Dimension 1 collector mods
+    {
+        "id": "ID-MO10", "product_type": "Modification", "category": "Interdimensional",
+        "name": "Dim-1 Foundry D-Boy Custom Grip Panels [Dim. 1]", "brand": "Dim-1 Foundry", "model": "DBoy-Grips",
+        "description": (
+            "Hand-carved G10 grip panels for 1911-pattern pistols, crafted in the "
+            "Dimension 1 by DopeBoy's personal armorer. Aggressive texture on "
+            "the palm swell; smooth D-Boy logo medallion inlaid at the heel. "
+            "Available in Prime Black. Fit all Government/Commander 1911s."
+        ),
+        "price": 199.99, "quantity": 4, "reorder_level": 2,
+        "mod_type": "Grips & Controls", "compatible_with": "1911 Government/Commander pattern", "installation_required": False,
+    },
+    {
+        "id": "ID-MO11", "product_type": "Modification", "category": "Interdimensional",
+        "name": "Prime Cerakote Service — Multidimensional Fade [Dim. 1]", "brand": "Dim-1 Foundry", "model": "PF-Fade",
+        "description": (
+            "In-house Cerakote refinishing by Dim-1 Foundry artisans. "
+            "The signature Multidimensional Fade transitions from Dim-5 Black through "
+            "Dim-3 Blue to Dim-4 Silver across the full length of the firearm — "
+            "representing the journey through all four known dimensions. "
+            "Available on any frame, slide, barrel, or complete firearm."
+        ),
+        "price": 449.99, "quantity": 99, "reorder_level": 99,
+        "mod_type": "Grips & Controls", "compatible_with": "Any firearm — premium service item", "installation_required": True,
     },
 ]
