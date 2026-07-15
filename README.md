@@ -1,6 +1,6 @@
 # dopeboy_caddy
 
-A Python simulation of a **multidimensional DopeBoy** who hustles across parallel dimensions and moonlights as a professional **golf caddy** — all while rolling in a fully customised **Cadillac**.
+A program of a **multidimensional DopeBoy** who hustles across parallel dimensions and moonlights as a professional **golf caddy** — all while rolling in a fully customised **Cadillac**.
 
 Also home to **Paseo Guns** — a full Python CLI gun-store management system.
 
